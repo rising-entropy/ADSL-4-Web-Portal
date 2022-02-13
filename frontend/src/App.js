@@ -21,10 +21,8 @@ import AddSectionPage from './pages/AddSectionPage';
 import SectionsPage from './pages/SectionsPage';
 import AddStudentTakesSectionPage from './pages/AddStudentTakesSectionPage';
 import StudentTakesSectionsPage from './pages/StudentTakesSectionsPage';
-
-
-
-
+import AddInstructorTeachesSectionPage from './pages/AddInstructorTeachesSectionPage';
+import InstructorTeachesSectionsPage from './pages/InstructorTeachesSectionsPage';
 
 function App() {
   return (
@@ -52,6 +50,8 @@ function App() {
         <Route exact path="/sections" element={<SectionsPage/>}/>
         <Route exact path="/add-student-section" element={<AddStudentTakesSectionPage/>}/>
         <Route exact path="/student-sections" element={<StudentTakesSectionsPage/>}/>
+        <Route exact path="/add-instructor-section" element={<AddInstructorTeachesSectionPage/>}/>
+        <Route exact path="/instructor-sections" element={<InstructorTeachesSectionsPage/>}/>
     </Routes>
   </Router>
   </>

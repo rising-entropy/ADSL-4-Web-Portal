@@ -12,5 +12,5 @@ urlpatterns = [
     path('/timeslots', TimeSlotAPI.as_view(), name='TimeSlotAPI'),
     path('/sections', SectionAPI.as_view(), name='SectionAPI'),
     path('/studenttakessection', StudentTakesSectionAPI.as_view(), name='StudentTakesSectionAPI'),
-    path('/instructorteachessection', InstructorTeachesSectionAPI.as_view(), name='InstructorTeachesSectionAPI'),
+    path('/instructorteachessection', InstructorTeachesSectionAPI.as_view(), name='InstructorTeachesSectionAPI')
 ]

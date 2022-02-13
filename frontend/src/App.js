@@ -7,6 +7,12 @@ import AddStudentPage from './pages/AddStudentPage'
 import StudentsPage from './pages/StudentsPage'
 import AddInstructorPage from './pages/AddInstructorPage';
 import InstructorsPage from './pages/InstructorsPage';
+import AddAdvisorPage from './pages/AddAdvisorPage';
+import AdvisorsPage from './pages/AdvisorsPage';
+import AddCoursePage from './pages/AddCoursePage';
+import CoursesPage from './pages/CoursesPage';
+import AddPreRequisitePage from './pages/AddPreRequisitePage';
+import PreRequisitesPage from './pages/PreRequisitesPage';
 
 
 function App() {
@@ -21,6 +27,12 @@ function App() {
         <Route exact path="/students" element={<StudentsPage/>}/>
         <Route exact path="/add-instructor" element={<AddInstructorPage/>}/>
         <Route exact path="/instructors" element={<InstructorsPage/>}/>
+        <Route exact path="/add-advisor" element={<AddAdvisorPage/>}/>
+        <Route exact path="/advisors" element={<AdvisorsPage/>}/>
+        <Route exact path="/add-course" element={<AddCoursePage/>}/>
+        <Route exact path="/courses" element={<CoursesPage/>}/>
+        <Route exact path="/add-prerequisite" element={<AddPreRequisitePage/>}/>
+        <Route exact path="/prerequisites" element={<PreRequisitesPage/>}/>
     </Routes>
   </Router>
   </>

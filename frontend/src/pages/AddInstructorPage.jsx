@@ -36,8 +36,6 @@ export default function AddInstructorPage() {
         setTheVals({...theVals, [event.target.name]: event.target.value})
     }
 
-
-
   return (
     <div className='container container-fluid text-center'>
         <h3>Add Instructor</h3>

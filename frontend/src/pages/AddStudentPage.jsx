@@ -49,6 +49,7 @@ export default function AddStudentPage() {
 
             <label htmlFor="department">Department</label><br />
             <select name="department" id="department" onChange={changeHandler}>
+            <option value={-1}>Select</option>
                 {depts.map((ele, ind)=><option key={ind} value={ele.id}>{ele.name}</option>)}
             </select><br /><br />
 

@@ -183,7 +183,11 @@ class SectionAPI(APIView):
             allInstances = Section.objects.filter()
             allList = []
             for instance in allInstances:
-                allList.append({"id": instance.id, "course": instance.course.title, "semester": instance.semester, "year": instance.year, "classroomBuilding": instance.classroom.building, "classroomRoomNumber": instance.classroom.room_number, "timeslot": instance.timeslot})
+                allList.append({"id": instance.id, "course": instance.course.title, "semester": instance.semester, "year": instance.year, "classroomBuilding": instance.classroom.building, "classroomRoomNumber": instance.classroom.room_number, "timeslot": {
+                        "day": instance.timeSlot.day,
+                        "startTime": instance.timeSlot.startTime,
+                        "endTime": instance.timeSlot.endTime,
+                    }})
             return Response(allList)
         except:
             return Response({"status": "500 Some Error Occurred"})
@@ -209,25 +213,22 @@ class StudentTakesSectionAPI(APIView):
             allInstances = StudentTakesSection.objects.filter()
             allList = []
             for instance in allInstances:
-                allList.append({"id": instance.id, "course": instance.course.title, "semester": instance.semester, "year": instance.year, "classroomBuilding": instance.classroom.building, "classroomRoomNumber": instance.classroom.room_number, "timeslot": instance.timeslot})
+                allList.append({"id": instance.id, "grade": instance.grade, "sectionCourse": instance.section.course.title,"sectionSemester": instance.section.semester,"sectionYear": instance.section.year, "student": instance.student.name})
             return Response(allList)
         except:
             return Response({"status": "500 Some Error Occurred"})
     def post(self, request):
-        try:
-            semester = request.data['semester']
-            year = request.data['year']
-            course = request.data['course']
-            course = Course.objects.filter(id=course)[0]
-            classroom = request.data['classroom']
-            classroom = Classroom.objects.filter(id=classroom)[0]
-            timeSlot = request.data['timeSlot']
-            timeSlot = TimeSlot.objects.filter(id=timeSlot)[0]
-            newTask = StudentTakesSection(semester=semester, course=course, year=year, classroom=classroom, timeSlot=timeSlot)
-            newTask.save()
-            return Response({"status": "200 OK"})
-        except:
-            return Response({"status": "500 Some Error Occurred"})
+        # try:
+        grade = request.data['grade']
+        section = request.data['section']
+        section = Section.objects.filter(id=section)[0]
+        student = request.data['student']
+        student = Student.objects.filter(id=student)[0]
+        newTask = StudentTakesSection(grade=grade, section=section, student=student)
+        newTask.save()
+        return Response({"status": "200 OK"})
+        # except:
+            # return Response({"status": "500 Some Error Occurred"})
 
 class InstructorTeachesSectionAPI(APIView):
     def get(self, request):

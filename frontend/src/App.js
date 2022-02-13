@@ -13,6 +13,17 @@ import AddCoursePage from './pages/AddCoursePage';
 import CoursesPage from './pages/CoursesPage';
 import AddPreRequisitePage from './pages/AddPreRequisitePage';
 import PreRequisitesPage from './pages/PreRequisitesPage';
+import AddClassroomPage from './pages/AddClassroomPage';
+import ClassroomsPage from './pages/ClassroomsPage';
+import AddTimeslotPage from './pages/AddTimeslotPage';
+import TimeslotsPage from './pages/TimeslotsPage';
+import AddSectionPage from './pages/AddSectionPage';
+import SectionsPage from './pages/SectionsPage';
+import AddStudentTakesSectionPage from './pages/AddStudentTakesSectionPage';
+import StudentTakesSectionsPage from './pages/StudentTakesSectionsPage';
+
+
+
 
 
 function App() {
@@ -33,6 +44,14 @@ function App() {
         <Route exact path="/courses" element={<CoursesPage/>}/>
         <Route exact path="/add-prerequisite" element={<AddPreRequisitePage/>}/>
         <Route exact path="/prerequisites" element={<PreRequisitesPage/>}/>
+        <Route exact path="/add-classroom" element={<AddClassroomPage/>}/>
+        <Route exact path="/classrooms" element={<ClassroomsPage/>}/>
+        <Route exact path="/add-timeslot" element={<AddTimeslotPage/>}/>
+        <Route exact path="/timeslots" element={<TimeslotsPage/>}/>
+        <Route exact path="/add-section" element={<AddSectionPage/>}/>
+        <Route exact path="/sections" element={<SectionsPage/>}/>
+        <Route exact path="/add-student-section" element={<AddStudentTakesSectionPage/>}/>
+        <Route exact path="/student-sections" element={<StudentTakesSectionsPage/>}/>
     </Routes>
   </Router>
   </>

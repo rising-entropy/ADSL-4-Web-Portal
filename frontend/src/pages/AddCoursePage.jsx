@@ -43,13 +43,13 @@ export default function AddCoursePage() {
             <h3>Add Course</h3>
             <br />
             <form onSubmit={submitHandler}>
-            <label htmlFor="title">Title</label><br />
-            <input value={theVals.title} onChange={changeHandler} type="text" name="title" id="title" required /><br /><br />
-            <label htmlFor="credits">Credits</label><br />
-            <input value={theVals.credits} onChange={changeHandler} type="text" name="credits" id="credits" required /><br /><br />
+            <label className='form-label' htmlFor="title">Title</label><br />
+            <input className='form-control' value={theVals.title} onChange={changeHandler} type="text" name="title" id="title" required /><br /><br />
+            <label className='form-label' htmlFor="credits">Credits</label><br />
+            <input className='form-control' value={theVals.credits} onChange={changeHandler} type="text" name="credits" id="credits" required /><br /><br />
 
-                <label htmlFor="department">Department</label><br />
-                <select name="department" id="department" onChange={changeHandler}>
+                <label className='form-label' htmlFor="department">Department</label><br />
+                <select className='form-select' name="department" id="department" onChange={changeHandler}>
                 <option value={-1}>Select</option>
                     {depts.map((ele, ind)=><option key={ind} value={ele.id}>{ele.name}</option>)}
                 </select><br /><br />

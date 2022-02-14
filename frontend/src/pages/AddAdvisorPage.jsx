@@ -52,14 +52,14 @@ export default function AddAdvisorPage() {
             <h3>Add Advisor</h3>
             <br />
             <form onSubmit={submitHandler}>
-                <label htmlFor="student">Student</label><br />
-                <select name="student" id="student" onChange={changeHandler}>
+                <label htmlFor="student" className='form-label'>Student</label><br />
+                <select className='form-select' name="student" id="student" onChange={changeHandler}>
                 <option value={-1}>Select</option>
                     {depts.map((ele, ind)=><option key={ind} value={ele.id}>{ele.name}</option>)}
                 </select><br /><br />
 
-                <label htmlFor="instructor">Instructor</label><br />
-                <select name="instructor" id="instructor" onChange={changeHandler}>
+                <label className='form-label' htmlFor="instructor">Instructor</label><br />
+                <select className='form-select' name="instructor" id="instructor" onChange={changeHandler}>
                 <option value={-1}>Select</option>
                     {depts2.map((ele, ind)=><option key={ind} value={ele.id}>{ele.name}</option>)}
                 </select><br /><br />

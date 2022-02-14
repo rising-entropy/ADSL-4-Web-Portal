@@ -52,14 +52,14 @@ export default function AddInstructorTeachesSectionPage() {
             <br />
             <form onSubmit={submitHandler}>
             
-                <label htmlFor="instructor">Instructor</label><br />
-                <select name="instructor" id="instructor" onChange={changeHandler}>
+                <label className='form-label' htmlFor="instructor">Instructor</label><br />
+                <select className='form-select' name="instructor" id="instructor" onChange={changeHandler}>
                 <option value={-1}>Select</option>
                     {depts.map((ele, ind)=><option key={ind} value={ele.id}>{ele.name}</option>)}
                 </select><br /><br />
 
-                <label htmlFor="section">Section</label><br />
-                <select name="section" id="section" onChange={changeHandler}>
+                <label className='form-label' htmlFor="section">Section</label><br />
+                <select className='form-select' name="section" id="section" onChange={changeHandler}>
                     <option value={-1}>Select</option>
                     {depts2.map((ele, ind)=><option key={ind} value={ele.id}>Course-{ele.course} Title-{ele.title} Semester-{ele.semester} {ele.year}</option>)}
                 </select><br /><br />

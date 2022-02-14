@@ -41,14 +41,14 @@ export default function AddStudentPage() {
         <h3>Add Student</h3>
         <br />
         <form onSubmit={submitHandler}>
-            <label htmlFor="name">Name</label><br />
-            <input value={theVals.name} onChange={changeHandler} type="text" name="name" id="name" required /><br /><br />
+            <label className='form-label' htmlFor="name">Name</label><br />
+            <input className='form-control' value={theVals.name} onChange={changeHandler} type="text" name="name" id="name" required /><br /><br />
             
-            <label htmlFor="credits">Credits</label><br />
-            <input value={theVals.credits} onChange={changeHandler} type="text" name="credits" id="credits" required /><br /><br />
+            <label className='form-label' htmlFor="credits">Credits</label><br />
+            <input className='form-control' value={theVals.credits} onChange={changeHandler} type="text" name="credits" id="credits" required /><br /><br />
 
-            <label htmlFor="department">Department</label><br />
-            <select name="department" id="department" onChange={changeHandler}>
+            <label className='form-label' htmlFor="department">Department</label><br />
+            <select className='form-select' name="department" id="department" onChange={changeHandler}>
             <option value={-1}>Select</option>
                 {depts.map((ele, ind)=><option key={ind} value={ele.id}>{ele.name}</option>)}
             </select><br /><br />

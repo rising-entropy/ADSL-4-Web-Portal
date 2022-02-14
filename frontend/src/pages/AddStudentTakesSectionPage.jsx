@@ -55,17 +55,17 @@ export default function AddStudentTakesSectionPage() {
             <h3>Add Section</h3>
             <br />
             <form onSubmit={submitHandler}>
-                <label htmlFor="grade">Grade</label><br />
-                <input value={theVals.grade} onChange={changeHandler} type="text" name="grade" id="grade" required /><br /><br />
+                <label className='form-label' htmlFor="grade">Grade</label><br />
+                <input className='form-control' value={theVals.grade} onChange={changeHandler} type="text" name="grade" id="grade" required /><br /><br />
 
-                <label htmlFor="section">Section</label><br />
-                <select name="section" id="section" onChange={changeHandler}>
+                <label className='form-label' htmlFor="section">Section</label><br />
+                <select className='form-select' name="section" id="section" onChange={changeHandler}>
                     <option value={-1}>Select</option>
                     {depts.map((ele, ind)=><option key={ind} value={ele.id}>Course-{ele.course} Title-{ele.title} Semester-{ele.semester} {ele.year}</option>)}
                 </select><br /><br />
 
-                <label htmlFor="student">Student</label><br />
-                <select name="student" id="student" onChange={changeHandler}>
+                <label className='form-label' htmlFor="student">Student</label><br />
+                <select className='form-select' name="student" id="student" onChange={changeHandler}>
                 <option value={-1}>Select</option>
                     {depts2.map((ele, ind)=><option key={ind} value={ele.id}>{ele.name}</option>)}
                 </select><br /><br />

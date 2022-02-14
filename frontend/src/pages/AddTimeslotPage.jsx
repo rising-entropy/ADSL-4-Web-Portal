@@ -25,14 +25,14 @@ export default function AddTimeslotPage() {
             <h3>Add Timeslot</h3>
             <br />
             <form onSubmit={submitHandler}>
-            <label htmlFor="day">Day</label><br />
-            <input value={theVals.day} onChange={changeHandler} type="text" name="day" id="day" required /><br /><br />
+            <label className='form-label' htmlFor="day">Day</label><br />
+            <input className='form-control' value={theVals.day} onChange={changeHandler} type="text" name="day" id="day" required /><br /><br />
 
-            <label htmlFor="startTime">Start Time</label><br />
-            <input value={theVals.startTime} onChange={changeHandler} type="text" name="startTime" id="startTime" required /><br /><br />
+            <label className='form-label' htmlFor="startTime">Start Time</label><br />
+            <input className='form-control' value={theVals.startTime} onChange={changeHandler} type="text" name="startTime" id="startTime" required /><br /><br />
 
-            <label htmlFor="endTime">End Time</label><br />
-            <input value={theVals.endTime} onChange={changeHandler} type="text" name="endTime" id="endTime" required /><br /><br />
+            <label className='form-label' htmlFor="endTime">End Time</label><br />
+            <input className='form-control' value={theVals.endTime} onChange={changeHandler} type="text" name="endTime" id="endTime" required /><br /><br />
 
                 <button type="submit" className='btn btn-success'>Add</button>
             </form>

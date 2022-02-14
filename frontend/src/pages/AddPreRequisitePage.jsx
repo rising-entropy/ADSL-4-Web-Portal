@@ -42,15 +42,15 @@ export default function AddPreRequisitePage() {
             <h3>Add Pre-requisite</h3>
             <br />
             <form onSubmit={submitHandler}>
-                <label htmlFor="course">Course</label><br />
+                <label className='form-label' htmlFor="course">Course</label><br />
 
-                <select name="course" id="course" onChange={changeHandler}>
+                <select className='form-select' name="course" id="course" onChange={changeHandler}>
                 <option value={-1}>Select</option>
                     {depts.map((ele, ind)=><option key={ind} value={ele.id}>{ele.title}</option>)}
                 </select><br /><br />
 
-                <label htmlFor="prereq">Pre-Req</label><br />
-                <select name="prereq" id="prereq" onChange={changeHandler}>
+                <label className='form-label' htmlFor="prereq">Pre-Req</label><br />
+                <select className='form-select' name="prereq" id="prereq" onChange={changeHandler}>
                 <option value={-1}>Select</option>
                     {depts.map((ele, ind)=><option key={ind} value={ele.id}>{ele.title}</option>)}
                 </select><br /><br />
